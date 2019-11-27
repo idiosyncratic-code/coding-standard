@@ -5,7 +5,9 @@
   xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd"
 >
   <!-- Include full Doctrine Coding Standard -->
-  <rule ref="Doctrine" />
+  <rule ref="Doctrine">
+    <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame" />
+  </rule>
 
     <!-- Register annotation to avoid flagging private attributes that are intended to be public read-only -->
   <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements">
