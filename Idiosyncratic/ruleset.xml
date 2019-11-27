@@ -2,15 +2,16 @@
 <ruleset
   name="Idiosyncratic"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd"
 >
   <!-- Include full Doctrine Coding Standard -->
   <rule ref="Doctrine" />
 
+    <!-- Register annotation to avoid flagging private attributes that are intended to be public read-only -->
   <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements">
     <properties>
       <property name="alwaysUsedPropertiesAnnotations" type="array">
-        <element value="@write-only" />
+        <element value="@public-read-only" />
       </property>
     </properties>
   </rule>
