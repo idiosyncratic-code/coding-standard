@@ -14,10 +14,16 @@
     "discard-changes": true,
     "bin-dir" : "bin"
   },
+  "autoload": {
+    "psr-4": {
+      "Idiosyncratic\\CodingStandard\\": "src/Idiosyncratic"
+    }
+  },
   "require": {
     "php": "^7.3",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "doctrine/coding-standard": "^6.0",
+    "idiosyncratic/editorconfig": "^0.1.0",
     "squizlabs/php_codesniffer": "^3.5"
   }
 }
