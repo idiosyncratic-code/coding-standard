@@ -11,12 +11,16 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "optimize-autoloader": true,
-    "discard-changes": true
+    "discard-changes": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   },
   "require": {
-    "php": "^7.3 || ^8.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "doctrine/coding-standard": "^8.2",
-    "squizlabs/php_codesniffer": "^3.5"
+    "php": "^8.2",
+    "doctrine/coding-standard": "^11.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+    "slevomat/coding-standard": "^8.6.2",
+    "squizlabs/php_codesniffer": "^3.7"
   }
 }
