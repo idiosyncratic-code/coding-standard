@@ -129,7 +129,6 @@
       <property name="withSpaces" value="no" />
     </properties>
   </rule>
-  </rule>
 
   <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation" />
 
