@@ -7,6 +7,7 @@
   <!-- Include Doctrine Coding Standard, with exceptions -->
   <rule ref="Doctrine">
     <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame" />
+    <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName" />
     <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
   </rule>
 
@@ -98,6 +99,8 @@
         <element value="static constructors"/>
         <element value="destructor"/>
 
+        <element value="invoke method"/>
+
         <element value="magic methods"/>
 
         <element value="public static abstract methods"/>
@@ -124,9 +127,9 @@
   <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
     <properties>
       <property name="enable" value="true" />
+      <property name="withSpacesAroundOperators" value="no" />
       <property name="shortNullable" value="no" />
       <property name="nullPosition" value="last" />
-      <property name="withSpaces" value="no" />
     </properties>
   </rule>
 
@@ -196,6 +199,24 @@
 
   <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration" />
 
+  <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+    <properties>
+      <property name="forbiddenAnnotations" type="array">
+        <element value="@api"/>
+        <element value="@author"/>
+        <element value="@category"/>
+        <element value="@copyright"/>
+        <element value="@created"/>
+        <element value="@license"/>
+        <element value="@package"/>
+        <element value="@since"/>
+        <element value="@subpackage"/>
+        <element value="@version"/>
+        <element value="@throws"/>
+      </property>
+    </properties>
+  </rule>
+
   <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
     <properties>
       <property name="allowDocCommentAboveReturn" value="false"  />
@@ -209,4 +230,17 @@
       <property name="nestingLevel" value="2" />
     </properties>
   </rule>
+
+  <rule ref="SlevomatCodingStandard.Complexity.Cognitive">
+    <properties>
+      <property name="warningThreshold" value="6"  />
+      <property name="errorThreshold" value="6" />
+    </properties>
+  </rule>
+
+  <rule ref="SlevomatCodingStandard.Classes.SuperfluousErrorNaming" />
+
+  <rule ref="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
+
+  <rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal" />
 </ruleset>
